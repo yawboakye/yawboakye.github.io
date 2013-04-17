@@ -4,11 +4,11 @@ html, body, section, a, span, div, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
 html { background: #ffe773; }
 
 body {
-  font:.8em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:.8em Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Arimo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 2em;
 }
 
