@@ -1,13 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
-
-html { background: #ffe773; }
+html, body, section, a, span, div, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
 
 body {
-  padding:1px;
   font:.8em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
 }
 
 span {
@@ -18,11 +14,10 @@ span {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 2.4em;
-  color: #888;
-  margin:0 0 3%;
+  color: #ccc;
+  margin: 0 0 1.5%;
 }
 
-h1, h2, h3 { line-height:150%; }
 section.description { width: 100%; }
 section.description div { width: 100%; }
 
@@ -34,11 +29,8 @@ span.mazes {
 
 .firstname { color: #000; }
 .lastname { color: #ccc; }
-.dot { color: #000; font-family: georgia; }
+.dot { color: #000; font-family: georgia, serif; }
 
-.my-name {
-  font-size: 5em;
-}
 
 h2 {
   color:#a60000;
@@ -49,21 +41,26 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#fff; /*39c*/
-  font-weight:bold;
+  color:#fff;
   text-decoration:none;
+}
+
+a:hover {
+  color:  #39c;
 }
 
 .wrapper {
   width:auto;
-  margin:1% auto;
-  padding: 2%;
+  margin: .3% auto;
+  padding: 0 2%;
 }
 
 .me {
   font-size: 2.2em;
-  margin-bottom: 5%;
+  margin:2% 0 5%;
 }
+
+.me h1 { line-height:122%;}
 
 @media print, screen and (max-width: 480px) {
   body {
