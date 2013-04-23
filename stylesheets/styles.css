@@ -1,25 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 html, body, section, a, span, div, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
-html { background: #ffe773; }
 
 body {
-  font:.8em Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font:.8em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 span {
-  font-family: 'Arimo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2em;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 2.4em;
-  color: #888;
+  color: #ccc;
   margin: 0 0 1.5%;
 }
 
-h1, h2, h3 { }
 section.description { width: 100%; }
 section.description div { width: 100%; }
 
@@ -43,9 +41,12 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#fff; /*39c*/
-  font-weight:bold;
+  color:#fff;
   text-decoration:none;
+}
+
+a:hover {
+  color:  #39c;
 }
 
 .wrapper {
