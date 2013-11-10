@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
+html { background: url(bg.png); }
 html, body, section, a, span, div, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
 
 body {
