@@ -6,6 +6,10 @@ body {
   font:.8em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+footer {
+  margin: 3% 2% .5%;
+}
+
 span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2em;
@@ -14,22 +18,21 @@ span {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 2.4em;
-  color: #ccc;
-  margin: 0 0 1.5%;
+  color: rgba(29, 162, 114, 0.75);
 }
 
 section.description { width: 100%; }
 section.description div { width: 100%; }
 
 span.mazes {
-  background: #000;
+  background: rgba(70, 130, 180, 0.39);
   padding: .5% 1%;
+  font-weight: 100;
 }
 
-
-.firstname { color: #000; }
-.lastname { color: #ccc; }
-.dot { color: #000; font-family: georgia, serif; }
+.firstname { color: #000; font-weight: 200;}
+.lastname { color: #ccc; font-weight: 100;}
+.dot { color: deeppink; font-family: georgia, serif; }
 
 
 h2 {
@@ -46,7 +49,7 @@ a {
 }
 
 a:hover {
-  color:  #39c;
+  color: #6707A7;
 }
 
 .wrapper {
@@ -57,7 +60,7 @@ a:hover {
 
 .me {
   font-size: 2.2em;
-  margin:2% 0 5%;
+  margin: 2% 0 3%;
 }
 
 .me h1 { line-height:122%;}
