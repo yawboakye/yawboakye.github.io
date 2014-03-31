@@ -82,7 +82,7 @@
                .data(random)
                .enter()
                .append('text')
-               .text(function(d) { return Math.round(d*10)/10; })
+               .text(function(d) { return Math.round(d*100)/100; })
                .attr({
                  x: function(d,i) { return i*(w/random.length)+25; },
                  y: function(d) { return h/2; },
@@ -113,12 +113,13 @@
           .append('text')
           .text(function(d) { return Math.round(d*10)/10; })
           .attr({
-            x: function(d, i) { return i*(w/random.length)+5; },
+            x: function(d, i) { return i*(w/random.length)+(w/random.length-1)/2; },
             y: function(d) { return h-d*10+15; },
             fill: 'white'
           })
           .attr('font-family','helvetica neue')
           .attr('font-size','10px')
+          .attr('text-anchor','middle')
 
     </script>
   </body>
