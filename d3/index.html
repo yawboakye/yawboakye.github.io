@@ -1,0 +1,125 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>D3</title>
+  <style>
+    .bar {
+      display: inline-block;
+      width: 20px;
+      height: 75px;
+      background: #ddd;
+      margin-right: 2px;
+    }
+
+    section { margin-bottom: 5%; }
+  </style>
+  <script src='lib/d3.v3.min.js' charset='utf-8'></script>
+</head>
+  <body>
+    <h1>From CSV file</h1>
+    <section id="food"></section>
+    <h1>Random values</h1>
+    <section id="random"></section>
+    <h1>SVG (circles)</h1>
+    <section id="svg-circle"></section>
+    <h1>SVG (rectangles)</h1>
+    <section id="svg-bar"></section>
+    <script>
+      var dataset, random, svgCircle, svgBars;
+
+      function color(v) {
+        var t = Math.round(v),
+            r = 122*t % 256,
+            g = 25*t % 256,
+            b = 78*t % 256;
+        return 'rgb('+r+','+g+','+b+')';
+      }
+
+      d3.csv('food.csv', function (error, data) {
+        if (error) {
+          console.log(error);
+        } else {
+          dataset = data;
+
+          d3.select('#food').selectAll('div')
+            .data(dataset)
+            .enter()
+            .append('div')
+            .attr('class', 'bar')
+            .style('height', function(d) { return d.Deliciousness*20 + 'px' })
+            .style('background', function(d) { return color(d.Deliciousness); })
+        }
+      })
+
+
+      random = [];
+      for (; random.length < 30 && random.push(Math.random()*10); );
+
+      d3.select('#random').selectAll('div')
+        .data(random)
+        .enter()
+        .append('div')
+        .classed('bar', true)
+        .style('height', function(d) { return d*20 + 'px'; })
+        .style('background', function(d) { return color(d); })
+
+
+      svgCircle = d3.select('#svg-circle').append('svg');
+      var h = 100, w = 1000;
+      svgCircle.attr('width', w).attr('height', h);
+
+      svgCircle.selectAll('circle')
+               .data(random)
+               .enter()
+               .append('circle')
+               .attr('cx', function(d, i) { return i*(w/random.length)+25; })
+               .attr('cy', h/2)
+               .attr('r', function(d) { return d*5; })
+               .attr('stroke', function(d) { return color(d); });
+
+      // Labels for the circles
+      svgCircle.selectAll('text')
+               .data(random)
+               .enter()
+               .append('text')
+               .text(function(d) { return Math.round(d*10)/10; })
+               .attr({
+                 x: function(d,i) { return i*(w/random.length)+25; },
+                 y: function(d) { return h/2; },
+                 fill: function(d) { return color(d); },
+               })
+               .attr('font-family','helvetica neue')
+               .attr('font-size','10px')
+
+
+      svgBar = d3.select('#svg-bar').append('svg');
+      svgBar.attr('width', w).attr('height', h);
+      svgBar.selectAll('rect')
+            .data(random)
+            .enter()
+            .append('rect')
+            .attr({
+              width: function(d) { return w/random.length - 1 },
+              height: function(d) { return d*10; },
+              x: function(d,i) { return i*(w/random.length)-2; },
+              y: function(d) { return h-d*10; },
+              fill: 'teal'
+            });
+
+      // Labels for the bars
+      svgBar.selectAll('text')
+          .data(random)
+          .enter()
+          .append('text')
+          .text(function(d) { return Math.round(d*10)/10; })
+          .attr({
+            x: function(d, i) { return i*(w/random.length)+5; },
+            y: function(d) { return h-d*10+15; },
+            fill: 'white'
+          })
+          .attr('font-family','helvetica neue')
+          .attr('font-size','10px')
+
+    </script>
+  </body>
+</html>
