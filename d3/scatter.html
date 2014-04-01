@@ -6,14 +6,27 @@
   </head>
   <body>
     <main>
+      <!-- section>.profile*2>p{this is a paragraph $}*7^kbd.aapl -->
       <div id="scatter"><!-- for the scatter diagram --></div>
     </main>
     <script type="text/javascript" charset="utf-8">
 
         var random = [];
-        for ( ; random.length < 20 && random.push([Math.random()*500, Math.random()*100]); );
+        for ( ; random.length < 20 && random.push([Math.random()*150, Math.random()*150]); );
 
-        var svg = d3.select('scatter').append('svg');
+        var
+        w = h = 500,
+        svg = d3.select('#scatter').append('svg');
+        svg.attr('width', w).attr('height', h);
+        svg.selectAll('circle')
+           .data(random)
+           .enter()
+           .append('circle')
+           .attr({
+             cx: function(d) { return d[0]; },
+             cy: function(d) { return d[1]; },
+             r: function(d) { return Math.sqrt(h - d[1]) }
+           })
 
     </script>
   </body>
