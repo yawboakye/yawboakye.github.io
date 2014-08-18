@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/yawboakye
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://yawboakye.com
+  * I am yawboakye (https://keybase.io/yawboakye) on keybase.
+  * I have a public key with fingerprint 276B FF10 E8CF FBAB 74E3  7420 D64C B286 705A 924F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.16"
+        },
+        "key": {
+            "fingerprint": "276bff10e8cffbab74e37420d64cb286705a924f",
+            "host": "keybase.io",
+            "key_id": "D64CB286705A924F",
+            "uid": "34c9004d0dc398a3fc46f1438c91c400",
+            "username": "yawboakye"
+        },
+        "merkle_root": {
+            "ctime": 1408329187,
+            "hash": "5856a78bf089f43d1ce62fa6b6f2b998e55365a5fabcc6325a4d5d0bc06d7b69ad22ee290aff885abe7dd7f7d1fe1476afcf8c3210083c5f26a2ce1623686f9e",
+            "seqno": 40328
+        },
+        "service": {
+            "hostname": "yawboakye.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408329554,
+    "expire_in": 157680000,
+    "prev": "d9e2d45c9fcc0c74b4aac5cdc08bbb30f3603bf36adebd2a40d7f32e4f75b8d0",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+
+owFdkn9oVlUYx9+9bUsFwyAQomxdJmO13s4995xzz30HpdPMstLcWiyjt/Nzu++2
+e1/vvdt8nTNwaSsaLcoUdYyQEYYwyx9h2P5oSjhBsCCCwD8UxH6KSIYp2blzUXr/
+uNxzn8/zfZ7v85yR+XdlshVjrZOLX97xwtmKUz/xTPPl9rX9Fg9l2cr3W6LLV0GS
+fgWsW1l5q1OVOYtVzg9rglCqXDGumWUarF4VxX4YGArkUM4m1kBDyqfZ2g/aVVSK
+/FTMgi7hWttAUaE1Z9xFynERBJIgwSElLsDMg0gbzY4wTm4ra81oFnxp/i4naFnT
+LX6p4VeYWM9MwEHCAwBJIIXjUeZogYi2kUOFZwsEQArGKpr1VGZ9PGSdZZU23K2i
+zi5ViMJwxrZI/JSxEaAO9GzqmpZY3GGyMMWEuZRrQD2NHGkLRaBmhBMNuedRhbFD
+MMOacSGIAzFDEkvABSDS5cRjEkKloAeY1pRixpUrpatdaWtlI5cwLTQVDrSBKS2w
+hoRBoWwCHUKJ9pTxEKv1QWjlEXAgHUiPUa8vVNp2OrY73eVE2G2SSlGYhCLsMqGO
+JCnlU9NJuZSifWqCF2ZVCtwPpNna//dqG/T2gWCMGiy1oeRHquCnBHYJBeZJ66he
+oyk9BSXCwtNCAOEijhgTWEgBKOfcAdohwOHmzaTiEjIEzBAcqJB2MacS/GeTmD5Z
+u5GM/faAJT2R2dfbFQ9UZiqymeqqbHpxM/PmLvj3Nu8avftm/3fVw1d74p/xH3s/
+yj2+JfPKa1u2PTlnWf3m/lXFqamjwy9NVuHxj3/71HvqoboL23587Hj16jk914ca
+W0lfVbTq4Vdfnx5vXPf18eLKiU+K80dP1SzPXb7w+Ysbjtrvf3mo9cBg98Irzfk9
+V759c3z41yXeO89lp+svflg6sXLw2fNrdr5bW/fBpQOZyS8WfLNuzeHe4b3bx5o3
+raBtm4Z239g91uLfU/t725nKtX+/caZl/8hQ28Hvj9X+9cgvp/cVB44cq7y2a6Hf
+dt9gy+Kx8M/GHeBSsNU98d7ktXmPfhbRoUWjO4MHRyem47Mb72VNV/ftXzL11f1b
+36o7l33+mXIpGYH1TUujk088/cPcfwA=
+=3Oti
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/yawboakye
+
+==================================================================
