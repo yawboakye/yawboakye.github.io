@@ -63,6 +63,13 @@ a:hover {
 
 .me h1 { line-height:122%;}
 
+.header-img {
+  text-align: center;
+  width: 70%;
+  height: auto;
+  margin: 10px auto;
+}
+
 @media print, screen and (max-width: 480px) {
   body {
     padding:1.5%;
