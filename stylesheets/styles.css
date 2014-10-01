@@ -36,8 +36,9 @@ a:hover {
 }
 
 .description {
+  color: #666;
   width: 100%;
   text-align: center;
-  background: #eee;
+  background: #fff;
   border: 10px solid #eee;
 }
