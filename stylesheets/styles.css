@@ -1,85 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 html, body, section, a, span, div, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
 
-body {
-  font:.8em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-footer {
-  margin: 3% 2% .5%;
-}
-
-span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 2em;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 2.4em;
-  color: rgba(29, 162, 114, 0.75);
-}
-
-section.description { width: 100%; }
-section.description div { width: 100%; }
-
-span.mazes {
-  background: rgba(70, 130, 180, 0.39);
-  padding: .5% 1%;
-  font-weight: 100;
-}
-
-.firstname, .lastname { color: #000; font-weight: 200;}
-.dot { color: deeppink; font-family: georgia, serif; }
-
-
-h2 {
-  color:#a60000;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
+html {
+  font-family: 'Helvetica Neue', 'Lato', sans-serif;
+  font-size: .9em;
+  background: #b1b9a7;
 }
 
 a {
-  color:#fff;
-  text-decoration:none;
+  color: #000;
+  transition: color ease-in .3s;
 }
 
 a:hover {
-  color: #6707A7;
+  color: #51564b;
+  transition: color ease-in .3s;
 }
 
 .wrapper {
+  text-align: center;
   width:auto;
   margin: .3% auto;
   padding: 0 2%;
 }
 
-.me {
-  font-size: 2.2em;
-  margin: 2% 0 3%;
-}
-
-.me h1 { line-height:122%;}
-
-.header-img {
-  text-align: center;
-  width: 70%;
-  height: auto;
+.main {
+  width: 60%;
   margin: 10px auto;
 }
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:1.5%;
-    font-size: .4em;
-  }
-  
-  h1, h2, h3 { line-height:250%; }
+.header-img {
+  width: 100%;
+  height: auto;
+  border: 10px solid white;
+}
 
-  section.description div {
-    font-size: 1em;
-    padding: 2%;
-  }
+.description {
+  width: 100%;
+  text-align: center;
+  background: #eee;
+  border: 10px solid #eee;
 }
