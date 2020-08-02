@@ -1,8 +1,8 @@
 # Setup
 title: Dark Poole
-url:
+url: https://getpoole.com
 paginate: 1
-baseurl: "https://andrewhwanpark.github.io/dark-poole/"
+baseurl: ""
 permalink: pretty
 
 # Gems
@@ -46,6 +46,3 @@ nav:
 
   - title: About
     url: /about
-
-  - title: Feed
-    url: /atom.xml

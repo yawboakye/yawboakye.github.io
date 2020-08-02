@@ -1,8 +1,14 @@
 # Dark Poole
 
-![Dark Poole](https://user-images.githubusercontent.com/13270895/89128529-4389bc00-d4c4-11ea-9db0-0e15c50825e4.png)
+![Dark Poole](https://user-images.githubusercontent.com/13270895/89133355-26b3af80-d4e9-11ea-81cd-eacaa9c78320.png)
 
-Dark Poole is a permanent dark theme of the Poole theme by [@mdo](https://github.com/mdo). I made the theme darker, inspired by [Derek Kedziora's site](https://derekkedziora.com/). Unlike default Poole that utilizes CSS media queries to activate dark mode, the theme will stay dark regardless of the user's preference. I also added a navbar that is easily customizable. Finally, I changed the default font size to 20px. That's it! I tried to be least intrusive as possible to the Poole code base.
+Dark Poole is a permanent dark theme of the Poole theme by [@mdo](https://github.com/mdo). I made the theme darker, inspired by [Derek Kedziora's site](https://derekkedziora.com/). Unlike default Poole that utilizes CSS media queries to activate dark mode, the theme will stay dark regardless of the user's preference.
+
+- I added a navbar that is easily customizable. Check out [Development](#development) to see how.
+- I also got rid of the "tagline" in the navbar. I think it looks cleaner without it.
+- Finally, I changed the default font size to 20px. I have 20/20 vision and still thought the original font size was too small.
+
+That's it! I tried to be least intrusive as possible to the Poole code base.
 
 ---
 
