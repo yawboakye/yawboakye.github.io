@@ -1,22 +1,10 @@
-# Poole
+# Dark Poole
 
-*The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
+![Dark Poole](https://user-images.githubusercontent.com/13270895/89128529-4389bc00-d4c4-11ea-9db0-0e15c50825e4.png)
 
------
+Dark Poole is a permanent dark theme of the Poole theme by [@mdo](https://github.com/mdo). I made the theme darker, inspired by [Derek Kedziora's site](https://derekkedziora.com/). Unlike default Poole that utilizes CSS media queries to activate dark mode, the theme will stay dark regardless of the user's preference. I also added a navbar that is easily customizable. Finally, I changed the default font size to 20px. That's it! I tried to be least intrusive as possible to the base code.
 
-Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@mdo](https://twitter.com/mdo) to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.
-
-![Poole](https://f.cloud.github.com/assets/98681/1834359/71ae4048-73db-11e3-9a3c-df38eb170537.png)
-
-See Poole in action with [the demo site](https://demo.getpoole.com).
-
-There are currently two official themes built on Poole:
-
-* [Hyde](https://hyde.getpoole.com)
-* [Lanyon](https://lanyon.getpoole.com)
-
-Individual theme feedback and bug reports should be submitted to the theme's individual repository.
-
+---
 
 ## Contents
 
@@ -24,7 +12,6 @@ Individual theme feedback and bug reports should be submitted to the theme's ind
 - [Development](#development)
 - [Author](#author)
 - [License](#license)
-
 
 ## Usage
 
@@ -36,24 +23,23 @@ Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS
 $ gem install jekyll jekyll-gist jekyll-sitemap jekyll-seo-tag
 ```
 
-**Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
+### 2. Install bundler
 
-**Need syntax highlighting?** Poole includes support for Pygments or Rouge, so install your gem of choice to make use of the built-in styling. Read more about this in the [Jekyll docs](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting).
+You must have bundler installed. If you already have bundler installed, please skip this step.
 
-### 2a. Quick start
-
-To help anyone with any level of familiarity with Jekyll quickly get started, Poole includes everything you need for a basic Jekyll site. To that end, just download Poole and start up Jekyll.
-
-### 2b. Roll your own Jekyll site
-
-Folks wishing to use Jekyll's templates and styles can do so with a little bit of manual labor. Download Poole and then copy what you need (likely `_layouts/`, `*.html` files, `atom.xml` for RSS, and `assets/` for CSS, JS, etc.).
+```bash
+# Update Rubygems
+$ gem update --system
+# Update bundler
+$ gem install bundler
+```
 
 ### 3. Running locally
 
 To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/poole` (or whatever your Jekyll site's root directory is named):
 
 ```bash
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 
 Open <http://localhost:4000> in your browser, and voilà.
@@ -63,9 +49,9 @@ Open <http://localhost:4000> in your browser, and voilà.
 If you host your code on GitHub, you can use [GitHub Pages](https://pages.github.com) to host your project.
 
 1. Fork this repo and switch to the `gh-pages` branch.
-  1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
-  2. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/poole`, use `http://username.github.io/poole/`. **Be sure to include the trailing slash.**
-3. Done! Head to your GitHub Pages URL or custom domain.
+1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
+1. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/poole`, use `http://username.github.io/poole/`. **Be sure to include the trailing slash.**
+1. Done! Head to your GitHub Pages URL or custom domain.
 
 No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
 
@@ -73,17 +59,33 @@ No matter your production or hosting setup, be sure to verify the `baseurl` opti
 
 Poole has two branches, but only one is used for active development.
 
-- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `master` for development. **All pull requests should be to submitted against `master`.**
 - `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
 CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
 
+### Customize Navbar
+
+You can easily customize the navbar by tweaking the `_config.yml` file. Simply change the title and url of each of the nav elements, or add more. The order will be preserved in the site.
+
+```yaml
+nav:
+  - title: Blog
+    url: /archive
+
+  - title: About
+    url: /about
+
+  - title: Feed
+    url: /atom.xml
+```
+
 ## Author
 
 **Mark Otto**
+
 - <https://github.com/mdo>
 - <https://twitter.com/mdo>
-
 
 ## License
 
