@@ -10,6 +10,8 @@ Dark Poole is a permanent dark theme of the Poole theme by [@mdo](https://github
 
 That's it! I tried to be least intrusive as possible to the Poole code base.
 
+**I noticed that Poole's documentation is slightly outdated and misleading. This documentation will try to address most, if not all, of these issues.**
+
 ---
 
 ## Contents
@@ -42,7 +44,7 @@ $ gem install bundler
 
 ### 3. Running locally
 
-To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/poole` (or whatever your Jekyll site's root directory is named):
+To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/dark-poole` (or whatever your Jekyll site's root directory is named):
 
 ```bash
 $ bundle exec jekyll serve
@@ -56,17 +58,46 @@ If you host your code on GitHub, you can use [GitHub Pages](https://pages.github
 
 1. Fork this repo and switch to the `gh-pages` branch.
 1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
-1. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/poole`, use `http://username.github.io/poole/`. **Be sure to include the trailing slash.**
+1. If you're not using a custom domain name, **modify the `url` in `_config.yml`** to point to your GitHub Pages URL. Example: for a site hosted at `username.github.io`, use `http://username.github.io`.
+1. If you want to use your repo name as a base url, **set the `url`** to your repo link and **set the `baseurl`** to your repo name in **`_config.yml`**. Example: for site hosted on `https://username.github.io/dark-poole`, set `url` as `https://username.github.io/dark-poole` and `baseurl` as `/dark-poole`.
 1. Done! Head to your GitHub Pages URL or custom domain.
 
 No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
+
+### 5. Pagination for sites with base urls
+
+If you are using a base url for your site, (for example, hosted on `https://username.github.io/dark-poole`) you have to make some changes to get jekyll-pagination to work correctly:
+
+In `_config.yml`, add this line:
+
+```yaml
+paginate_path: "/baseurl/page:num/"
+```
+
+In `archive.md`, add `{{ site.baseurl }}` before `{{ post.url }}`
+
+```html
+<!-- Add "{{ site.baseurl }}" -->
+<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+```
+
+In `index.html`, remove the `prepend:`:
+
+```html
+<!-- Remove "prepend:" in "prepend: relative_url" -->
+<a
+  class="pagination-item newer"
+  href="{{ paginator.previous_page_path | relative_url }}"
+  >Newer</a
+>
+```
 
 ## Development
 
 Poole has two branches, but only one is used for active development.
 
 - `master` for development. **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
+- `gh-pages` for hosted demo **Please avoid using this branch.**
 
 CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
 
@@ -81,9 +112,6 @@ nav:
 
   - title: About
     url: /about
-
-  - title: Feed
-    url: /atom.xml
 ```
 
 ## Author
