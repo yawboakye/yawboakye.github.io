@@ -1,7 +1,7 @@
 # Setup
-title: Dark Poole
-url: https://getpoole.com
-paginate: 1
+title: Insignificant Truths
+url: https://yaw.yiadom.org
+paginate: 2
 baseurl: ""
 permalink: pretty
 
@@ -27,14 +27,11 @@ sass:
 
 # Options
 
-# Replace this value and uncomment to enable Google Analytics tracking
-# ga_analytics: UA-000000-0
-
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Yaw Boakye
+  url: https://yaw.yiadom.org
+  email: wheresyaw@gmail.com
 
 # Custom vars
 version: 3.0.0
