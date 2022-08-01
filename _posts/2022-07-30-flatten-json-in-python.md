@@ -138,7 +138,7 @@ encounters further objects on its way, it pauses to resolve them. And then conti
 The code above is all that was needed at my friend's interview. Well, not quite. The interviewer
 wanted a function that flattens a JSON object but now we demand of them to pass 2 other arguments to
 the function. It wasn't a _disgraceful_ challenge so we should be nice to them. Also, as the author
-of a [post]({%post_url 2020-04-03-options %}) complaining bitterly about N-parameter functions I owe
+of a [post]({%post_url 2022-06-25-function-parameters %}) complaining bitterly about N-parameter functions I owe
 it to you to do the right thing. So we'll bring it back to a single-parameter function by taking
 advantage of one of the many niceties of Python.
 
