@@ -1,5 +1,4 @@
 ---
-something: something
 layout: post
 title: Function Parameters
 ---
