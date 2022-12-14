@@ -1,8 +1,7 @@
 # Setup
 title: Insignificant Truths
 url: https://yaw.yiadom.org
-paginate: 2
-baseurl: ""
+paginate: 5
 permalink: pretty
 
 # Gems

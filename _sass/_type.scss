@@ -2,11 +2,17 @@
 //
 // Headings, body text, lists, and other misc typographic elements.
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.25;
   color: var(--heading-color);
+  font-family: var(--code-font);
 }
 
 h1 {
@@ -23,7 +29,9 @@ h3 {
   font-size: 1.25rem;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: 1rem;
   font-size: 1rem;
 }
@@ -33,7 +41,9 @@ p {
   margin-bottom: 1rem;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -43,7 +53,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 hr {
@@ -66,10 +76,10 @@ abbr {
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
   color: var(--gray-500);
-  border-left: .25rem solid var(--border-color);
+  border-left: 0.25rem solid var(--border-color);
 
   p:last-child {
     margin-bottom: 0;
@@ -85,7 +95,6 @@ figure {
   margin: 0;
 }
 
-
 // Markdown footnotes
 //
 // See the example content post for an example.
@@ -95,7 +104,7 @@ a[href^="#fn:"],
 // Back to footnote link
 a[href^="#fnref:"] {
   display: inline-block;
-  margin-left: .1rem;
+  margin-left: 0.1rem;
   font-weight: bold;
 }
 

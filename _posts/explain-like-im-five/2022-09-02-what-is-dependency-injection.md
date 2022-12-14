@@ -17,7 +17,7 @@ injection][] (DI) design pattern lies in knowing what a _dependency_ is. In
 software, _dependency_ can be used to refer to quite different things, making it
 harder to cleanly pin down a reliable definition. For example, entire libraries
 you use within your application (those things you install with `yarn add ...`,
-`gem install ..` and friends) are called dependencies too. So, are those the
+`gem install ...` and friends) are called dependencies too. So, are those the
 dependencies we're trying to inject? Not necessarily.
 
 If we accept a definition of _dependency_ as a certain requirement, necessary or
