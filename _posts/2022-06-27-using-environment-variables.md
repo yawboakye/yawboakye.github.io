@@ -12,8 +12,8 @@ running in, then configures itself appropriately. After the application is up
 and running, there's barely any good reason for it to try to figure out its
 running environment.
 
-In the code base I work on, this is how we've used environment variables. 
-In my code base, we have used some environment variables to influence logic in
+In the code base I work on, this is how we've used environment variables.  In my
+code base, we have used some environment variables to influence logic in
 different places. This is a story of how it made life difficult for us during
 tests and two solutions we have come up with to address it.
 
@@ -25,11 +25,18 @@ OS-level environment variables, to be specific), cast to the appropriate types,
 and set necessary defaults.  Any part of the code would import the environment
 variables module if it needed to. Nice and clean.  A simplified example,
 
-{% highlight typescript linenos %} import * as env from 'config/env' function
-processTransaction (id: string) { const transaction = getTransaction(id) const
-result = process(transaction) if (env.rewardCustomer) { const customer =
-getCustomer(transaction.customer) rewardCustomer(customer) } return result } {%
-endhighlight %}
+{% highlight typescript linenos %}
+import * as env from 'config/env'
+function processTransaction (id: string) {
+    const transaction = getTransaction(id)
+    const result = process(transaction)
+    if (env.rewardCustomer) {
+        const customer = getCustomer(transaction.customer)
+        rewardCustomer(customer)
+    }
+    return result
+}
+{% endhighlight %}
 
 All well and good, until we have to test. In our attempt to cover both cases, we
 have to test the `processTransaction` function once with `rewardCustomer` as
