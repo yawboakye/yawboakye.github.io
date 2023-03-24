@@ -53,29 +53,34 @@ wait.
 
 ## Playing with `Buffer`s
 
-Lately (since ~5 months) I've been writing quite a lot of TypeScript for a new
-venture I'm starting with a friend. In short, we're building a neobank for the
-new generations of Africans, starting with Ghanaians. We decided on the
+Lately (since ~7 months) I've been writing quite a lot of TypeScript for a
+custom software application (to be used by a few friends and family).
+We&mdash;because there's two of us working on it&mdash;decided on the
 [Node.js&reg;][node] mainly due to TypeScript's powerful type system that is
-arguably unmatched in other high-level application programming languages.
-Personally, I'm daily excited by the ability to model critical system invariants
-in the type system alone, so that they are checked statically, assuaging any and
-all runtime sacrifices made to the validation gods. Where my inner Descartes
-[won't let me trust the type system completely][cot], I've thrown in a few
-assertions. I hear they're inexpensive in Node&mdash;I haven't confirmed.
+arguably unmatched in other high-level application programming languages (with
+the exception of Rust maybe).  Personally, I'm daily excited by the ability to
+model critical system invariants in the type system alone, so that they are
+checked statically, assuaging any and all runtime sacrifices made to the
+validation gods. Where my inner Descartes [won't let me trust the type system
+completely][cot], I've thrown in a few assertions. I hear they're inexpensive in
+Node&mdash;I haven't confirmed.
 
-It is in the process of building this venture that I've been playing with the
-`Buffer` type and its JSON representation. A little about this buffer as JSON
-thing.
-I'm curious whether it could solve the binary file transfer problem in a more
-elegant way. Elegant in the sense that (1) we don't have to switch content type
-to `application/octet-stream` or `multipart/form-data`, and (2) we don't
+So I've been playing with the `Buffer` type. And although I have no immediate
+need to send or receive binary data, I wanted to find out how `Buffer`'s JSON
+representation fared against current methods, i.e. actual binary transmission (e.g. as
+`application/octet-stream`) and the makeshift base64 string that ensures
+ubiquity of `application/json` content type. JSON-ified buffer could fly under
+the `application/json` banner as well.
+
+I'm curious whether it could solve the binary file transfer problem in a
+more elegant way. Elegant in the sense that (1) we don't have to switch content
+type to `application/octet-stream` or `multipart/form-data`, and (2) we don't
 introduce a percentage increase in the size of the data.
 
 To that end, I want to take `Buffer` for a spin. Below, I have a richly colorful
 image of a gorgeous Ghanaian lady from the [2022 FIFA Men's World Cup
-competition][wc2022] (photo taken from Twitter). I will send it to this tiny
-file upload server. I'll try to send in various forms, as:
+competition][wc2022] (photo taken from [Twitter](https://twitter.com)). I will
+send it to a tiny file upload server. I'll try to send in various forms, as:
 
   1.  binary, w/ `application/octet-stream` content type,
   2.  `base64`, w/ `application/json` content type,
@@ -83,9 +88,9 @@ file upload server. I'll try to send in various forms, as:
 
 ![Beautifully painted Ghanaian woman at FIFA World Cup 2022](/assets/gh-woman_200x250.jpeg)
 
-During (3), I'll be interested in how the request's `Content-Length` is counted.
-The `Content-Length` header is set by the client. Here's the image's metadata
-according to [`stat`][stat]:
+, I'll be interested in how payload size will be measured. The payload
+size is communicated to the server via the `Content-Length` header value. Here's
+the image's metadata according to [`stat`][stat]:
 
 {% highlight plain %}
 File: gh-woman_200x250.jpeg
@@ -116,7 +121,7 @@ by 33% (as predicted) from 29.4kB to 39.2kB. Converting the buffer to JSON
 
 ### Binary, `application/octet-stream` content type
 The request received on the server had a `content-length` value exactly equal to
-the size of the image on disk: 29.4 kB (29,362 bytes) uncompressed. 
+the size of the image on disk: 29.4 kB (29,362 bytes) uncompressed.
 
 ### Base64, `text/plain` content type
 ### Buffer JSON, `application/json` content type
