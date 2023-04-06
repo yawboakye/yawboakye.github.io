@@ -9,7 +9,7 @@ tags: dependency injection solid principles software philosophy
 > attempting to learn how to calculate, can be abolished once for all by simply
 > stating what is the meaning–in common-sense terms–of the two principal symbols
 > that are used in calculating.
-> 
+>
 > &mdash; Silvanus P. Thompson, [Calculus Made Easy][CME]
 
 In my opinion, the biggest obstacle to understanding the [dependency
@@ -221,10 +221,11 @@ Enough said about dependency injection. As with all principles, the practice
 can, and I believe should, be allowed to deviate from the theory. Thus, you
 should expect to see wild varieties in implementations both of dependency
 injection itself and its frameworks. Regardless, they should share a single
-_animus_, and I think it's that soul that I've tried to capture here.
+<em class="latin">animus</em>, and I think it's that soul that I've tried to capture here.
 
 Vale!
 
+___
 [^fn-inject]: `inject` derives from the latin `inicere` with the imperative form `inice`. As a latinist, my preferred translation, and one that fits the purpose here, is throw into. See [Wiktionary](https://en.wiktionary.org/wiki/inicio#Latin) for more forms. `inject` as used in dependency injection is the imperative form of the verb. it appears that english derived the verb from the french `injecter` which has an interesting history. as it happens quite frequently in latin, verbs are backformed from supines of existing verbs. `iniectare` was backformed from `inicere`'s supine, `iniectum`, and took on a life of its own. french derived `injecter` from `iniectare`. later, english derived `to inject` from french's `injecter`.
 [^fn-ubiquitous_hierarchy]: > ... a matrix on the n-level is represented on the n+1 level by its code. ...  loss of direct control over automatized processes on lower levels of the body  hierarchy is part of the price paid for differentiation and specialization. &mdash; Arthur Koestler, [ The Act of Creation](https://en.wikipedia.org/wiki/The_Act_of_Creation), chapter on The Ubiquitous Hierarchy.
 
