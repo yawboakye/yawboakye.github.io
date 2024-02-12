@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Strings In Go's Runtime
+title: Strings in Go's runtime
 ---
 
 ## Motivation

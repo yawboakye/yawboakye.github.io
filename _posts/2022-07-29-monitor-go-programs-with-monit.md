@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monitoring Go Applications with Monit
+title: Monitoring Go applications with Monit
 ---
 
 ## Out-of-Memory

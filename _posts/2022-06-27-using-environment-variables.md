@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Environment Variables
+title: Using environment variables
 ---
 
 Especially for web applications, the software is usually considered to run in an

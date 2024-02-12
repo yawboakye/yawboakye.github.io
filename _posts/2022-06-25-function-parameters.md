@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Function Parameters
+title: Function parameters
 ---
 
 ## Motivation

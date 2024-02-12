@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ActiveRecord Should Ask For More Than ID
+title: ActiveRecord should ask for more than record identifier
 ---
 
 This post is targeted at Rails developers who use [`ActiveRecord`][AR] with,

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flattening Nested JSON"
+title: Flattening nested JSON
 ---
 
 ## Motivation

@@ -23,6 +23,7 @@ body {
 // No `:visited` state is required by default (browsers will use `a`)
 a {
   color: var(--link-color);
+  text-decoration: none;
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
@@ -70,4 +71,9 @@ mark {
   padding: .15rem;
   background-color: var(--yellow-100);
   border-radius: .125rem;
+}
+
+.latin {
+  font-family: var(--latin-font-family);
+  font-size: 1.4em;
 }

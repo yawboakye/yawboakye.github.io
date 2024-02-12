@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measuring the size of a JSON payload
-draft: true
+draft: false
 ---
 
 > One King, One Law, One Weight, One Measure.
