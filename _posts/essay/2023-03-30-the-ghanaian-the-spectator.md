@@ -2,6 +2,7 @@
 category: essays-on-politics
 layout: post
 title: The Ghanaian, the spectator
+draft: true
 ---
 
 > It is not the critic who counts; not the man who points out how the strong man

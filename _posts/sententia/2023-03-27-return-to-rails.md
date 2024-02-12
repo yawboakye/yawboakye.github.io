@@ -3,6 +3,7 @@ category: sententia
 layout: post
 title: Returning to Ruby on Rails & MVC
 tags: web development ruby-on-rails rails artificial intelligence ai
+draft: true
 ---
 
 **TL;DR&mdash;Ruby on Rails has refused to adapt to the times and practices of

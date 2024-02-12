@@ -3,6 +3,7 @@ category: sententia
 layout: post
 title: Yes, Rust is beginner-friendly
 tags: rust rust-lang beginner-friendly toprank pedagogy philosophy
+draft: true
 ---
 
 **TL;DR&mdash;Rust, the programming language and technology is
