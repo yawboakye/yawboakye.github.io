@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Measuring the size of a JSON payload
+title: Why's JSON-encoded data so big?
 draft: true
 ---
 
